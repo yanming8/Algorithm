@@ -22,7 +22,7 @@ public class Solution {
 		for (int i = 0; i < length; i++) {
 			int j = S.charAt(i) - 'a';
 			lastIndexOfChar[j] = i;
-		}
+		}    
 
 		List<Integer> partitions = new ArrayList<>();
 		int firstIndex = 0;
