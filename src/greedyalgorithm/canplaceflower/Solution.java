@@ -14,18 +14,18 @@ package greedyalgorithm.canplaceflower;
 public class Solution {
 	public boolean canPlaceFlowers(int[] flowerbed, int n) {
 		int length = flowerbed.length;
-		int count = 0;
+		int counts = 0;
 		for (int i = 0; i < length; i++) {
 			int cur = flowerbed[i];
 			if (cur == 0) {
 				int pre = i == 0 ? 0 : flowerbed[i - 1];
 				int next = i == length - 1 ? 0 : flowerbed[i + 1];
 				if (pre == 0 && next == 0) {
-					count++;
+					counts++;
 					flowerbed[i] = 1;
 				}
 			}
 		}
-		return count >= n;
+		return counts >= n;
 	}
 }
